@@ -212,30 +212,6 @@ Score scaling is a presentation step; it does not guarantee that predictions are
 
 ---
 
-## Composite Ad Quality Score
-
-The project can also use a separately defined, weighted **Composite Ad Quality Score** to summarize an advertisement's overall quality according to a chosen evaluation framework.
-
-The composite score is calculated from its designated component attributes and their predefined weights.
-
-```text
-          Attribute Scores
-                 |
-                 v
-       Predefined Weighting Scheme
-                 |
-                 v
-       Composite Ad Quality Score
-```
-
-The composite score is calculated separately from the six attribute predictions. It is not an additional output of the six trained Ridge regression models.
-
-This separation keeps psychological attribute prediction distinct from the overall quality evaluation framework.
-
-The composite score is meaningful only relative to its definition and weighting scheme. It should not be treated as a direct measure of real-world campaign performance unless validated against relevant outcome data.
-
----
-
 ## Model Evaluation
 
 The regression models should be evaluated on held-out data that was not used during training or hyperparameter tuning.
@@ -285,22 +261,22 @@ The interface provides a convenient way to inspect predictions without manually 
 ```text
 ad-insights-ai/
 ├── data/
-│   └── README.md                 # Dataset instructions
+│   └── apple
+│   └── bmw
+│   └── coke
+│   └── mcdonalds
+│   └── nike                      # Dataset containing images and videos
 │
-├── models/
-│   └── README.md                 # Model artifact instructions
+├── outputs/
+│   └── dinov2_large              # Model artifact instructions
+│       └── ...                   # Output Files and Saved Model
 │
 ├── notebooks/
-│   └── exploratory_analysis.ipynb
+│   └── adInsightPrediction.ipynb
 │
-├── src/
-│   ├── feature_extraction.py     # DINOv2 embedding extraction
-│   ├── train.py                  # Regression model training
-│   ├── predict.py                # Attribute prediction pipeline
-│   └── app.py                    # PyQt6 desktop application
+├── ad_insight_app.py
 │
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
