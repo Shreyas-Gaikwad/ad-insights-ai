@@ -1,6 +1,6 @@
 # Ad Insights AI
 
-https://github.com/user-attachments/assets/6328324a-8ee3-4873-8b12-f6c1272b3844
+<video src="https://github.com/user-attachments/assets/4e527b4d-8c74-466a-9d81-53961d13c78e" controls width="100%"></video>
 
 An AI-powered **advertising intelligence and visual analytics system** that analyzes advertising creatives and predicts their underlying psychological attributes using computer vision and machine learning.
 
