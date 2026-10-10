@@ -1,0 +1,8 @@
+PyQt6
+torch
+transformers
+pandas
+numpy
+Pillow
+opencv-python
+joblib
