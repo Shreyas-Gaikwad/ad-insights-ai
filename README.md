@@ -62,9 +62,7 @@ Each attribute is predicted independently, allowing an advertisement to receive 
 
 ---
 
-## Data and Manual Labeling
-
-### Dataset Preparation
+## Dataset Preparation
 
 The dataset consists of advertising images paired with manually assigned numerical labels for six psychological attributes.
 
